@@ -23,7 +23,7 @@ Instead of using the OS module are you going use the replitkey module.
 ```python
 import replitkey
 
-print(replitkey)
+print(replitkey.getdomain())
 ```
 Once the URL appears Copy it the URL it the Getaway to the Repl's database
 
