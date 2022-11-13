@@ -2,6 +2,7 @@
 # Just do not edit any code or the package will not work correctly
 # @mas6y6 on github
 import os
+import base64
 
 class URLError(Exception):
     pass
@@ -28,13 +29,17 @@ def remove_char(string, n):
     end = string[n+1:]
     return begin + end
 
+def fixvalue(value):
+    d1 = len(value)
+    return remove_char(value, d1)
+
 def getdomain():
     return os.getenv("REPLIT_DB_URL")
 
 class key:
     def __init__(self,URL):
         os.system("clear")
-        print("Installing Requests Package")
+        print("Installing packages")
         os.system("pip install requests")
         os.system("clear")
         import requests
@@ -62,26 +67,33 @@ Error: 500""")
     def __str__(self):
         return f"Connected to {self.URL} Replit Server"
         #This is the code that returns URL data
-    
+
+#Set Keys   
     def set(self,key,value):
-        try:    
-            os.system(f"curl {self.URL} -d '{key}={value}'")
+        try:
+            sample_string_bytes = value.encode("ascii")
+            base64_bytes = base64.b64encode(sample_string_bytes)
+            encoded = base64_bytes.decode("ascii")
+            os.system(f"curl {self.URL} -d '{key}={encoded}'")
         except:
             raise Communicationerror("Unknown error has occurred")
         finally:
             pass
         #This is the code that sets a key
 
-    
+#Get values
     def get(self,key):
-        try:
-            os.system(f"curl {self.URL}/{key}")
+        try: 
+            base64_string = fixvalue(os.system(f"curl {self.URL}/{key}"))
+            base64_bytes = base64_string.encode("ascii")
+            sample_string_bytes = base64.b64decode(base64_bytes)
+            returndata = sample_string_bytes.decode("ascii")
         except:
             raise Communicationerror("Unknown error has occurred")
         finally:
-            return os.system(f"curl {self.URL}/{key}")
+            return returndata
         #This is the code that gets a key's value
-    
+#Key settings
     def delete(self,key):
         try:
             os.system(f"curl -XDELETE {self.URL}/{key}")
