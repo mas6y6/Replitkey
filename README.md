@@ -33,11 +33,57 @@ DATABASE = replitkey.key("URL") # Replace the Input with the URL that you Copyed
 ```
 Once thats done then you are connected
 
-# How to getKeys setKeys etc... with a object `database.get("Key"),database.set("Key","Value / Text") database.delate("Key") database.list("Key")`
+# How to getKeys setKeys etc... with a object `database.get("Key"), etc...`
 
-**Setup Key `database.set()`**
+**Set Key `database.set()`**
 
 The Key can Be Set as new OR Set a existing key
-```python3
+```python
+database.set("Key","Value/text")
+```
+
+**Get a keysvalue`database.get()`
+To key's get a value, type this into your local python project
+
+Note note on the replit server it displays the actual value but on local displays the actual value but follows of a unknown character
+
+```python
+database.get("Key")
+```
+
+**Delate a Key`database.delete()`**
+
+To delete a Key, type this into your local python project
+```python
+database.delete("Key")
+```
+
+**List key`database.list()`**
+
+To list a Key, type this into your local python project
+
+Note i dont know what this does but I had to add it.
+
+```python
+database.list("Key")
+```
+
+# Update Replitkey `Shell`
+
+type this into your terminal or Shell
+
+Note, make sure that you're always in the latest version replit can update the database as well.
 
 ```
+pip install replitkey --upgrade
+```
+
+This will update the replitkey module
+
+# Who wrote this?
+
+**mas6y6**
+@mas6y6 on scratch
+@mas6y6 on replit
+@mas6y6 on github
+@mas6y6 on pypi
