@@ -7,4 +7,4 @@
 ## More information
 
 More information about this module is on GitHub Use the link below:
-https://github.com/mas6y6/Replitkey/tree/main
+https://github.com/mas6y6/Replitkey/
