@@ -1,8 +1,0 @@
-setup.py
-replitkey/__init__.py
-replitkey/valueget.py
-replitkey.egg-info/PKG-INFO
-replitkey.egg-info/SOURCES.txt
-replitkey.egg-info/dependency_links.txt
-replitkey.egg-info/not-zip-safe
-replitkey.egg-info/top_level.txt
