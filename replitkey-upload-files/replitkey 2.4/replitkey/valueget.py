@@ -29,10 +29,6 @@ def remove_char(string, n):
     end = string[n+1:]
     return begin + end
 
-def fixvalue(value):
-    d1 = len(value)
-    return remove_char(value, d1)
-
 def getdomain():
     return os.getenv("REPLIT_DB_URL")
 
@@ -71,10 +67,7 @@ Error: 500""")
 #Set Keys   
     def set(self,key,value):
         try:
-            sample_string_bytes = value.encode("ascii")
-            base64_bytes = base64.b64encode(sample_string_bytes)
-            encoded = base64_bytes.decode("ascii")
-            os.system(f"curl {self.URL} -d '{key}={encoded}'")
+            os.system(f"curl {self.URL} -d '{key}={value}'")
         except:
             raise Communicationerror("Unknown error has occurred")
         finally:
@@ -84,14 +77,11 @@ Error: 500""")
 #Get values
     def get(self,key):
         try: 
-            base64_string = fixvalue(os.system(f"curl {self.URL}/{key}"))
-            base64_bytes = base64_string.encode("ascii")
-            sample_string_bytes = base64.b64decode(base64_bytes)
-            returndata = sample_string_bytes.decode("ascii")
+            os.system(f"curl {self.URL}/{key}")
         except:
             raise Communicationerror("Unknown error has occurred")
         finally:
-            return returndata
+            return os.system(f"curl {self.URL}/{key}")
         #This is the code that gets a key's value
 #Key settings
     def delete(self,key):
