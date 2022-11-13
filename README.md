@@ -3,12 +3,14 @@ Replitkey is for connection from a local device to a online replit database serv
 #How to install
 
 Type this command into your shell or terminal
+If you're on replit use this
 ```
 pip install replitkey
 ```
 **OR**
 
 Type this on the very top of your Python program
+If you're on replit use this
 ```python
 import os
 
@@ -17,10 +19,11 @@ os.system("pip install replitkey")
 
 # Connect to a REPLIT Database`replitkey.key()`
 To connect yo a database its to type this into your repl
+Instead of using the OS module are you going use the replitkey module.
 ```python
-import os
+import replitkey
 
-print(os.getenv("REPLIT_DB_URL")) # Note the input NEEDS to be the same Don’t remove "REPLIT_DB_URL"
+print(replitkey)
 ```
 Once the URL appears Copy it the URL it the Getaway to the Repl's database
 
