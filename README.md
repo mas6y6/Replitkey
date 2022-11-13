@@ -14,4 +14,4 @@ import os
 
 os.system("pip install replitkey")
 ```
-#How to Use it
+# Connect to a REPLIT Database``
