@@ -16,6 +16,22 @@ import os
 
 os.system("pip install replitkey")
 ```
+#Set Shell to bash'Shell'
+
+A fix has been found to the get function
+
+Do you need to switch shell operating systems
+
+**bash(NEEDED)**
+Type this in your shell to work
+```
+chsh -s /bin/bash
+```
+**zsh**
+Type this in your shell to work
+```
+chsh -s /bin/zsh
+```
 
 # Connect to a REPLIT Database`replitkey.key()`
 To connect yo a database its to type this into your repl
