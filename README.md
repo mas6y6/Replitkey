@@ -16,7 +16,7 @@ import os
 
 os.system("pip install replitkey")
 ```
-#Set Shell to bash'Shell'
+# Set Shell to bash'Shell'
 
 A fix has been found to the get function
 
