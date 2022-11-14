@@ -22,12 +22,12 @@ A fix has been found to the get function
 
 Do you need to switch shell operating systems
 
-**bash(NEEDED)**
+**bash**
 Type this in your shell to work
 ```
 chsh -s /bin/bash
 ```
-**zsh**
+**zsh(NEEDED)**
 Type this in your shell to work
 ```
 chsh -s /bin/zsh
