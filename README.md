@@ -34,7 +34,7 @@ chsh -s /bin/zsh
 ```
 
 # Connect to a REPLIT Database`replitkey.key()`
-To connect yo a database its to type this into your repl
+To connect to a database its to type this into your repl
 Instead of using the OS module are you going use the replitkey module.
 ```python
 import replitkey
